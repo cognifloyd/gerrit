@@ -38,6 +38,16 @@ default['gerrit']['config']['sshd']['listenAddress'] = "*:29418"
 default['gerrit']['config']['cache']['directory'] = "cache"
 default['gerrit']['config']['httpd']['listenUrl'] = "http://*:8080"
 
+default['gerrit']['config']['trackingid']['jira-fixes']['footer'] = "Fixes"
+default['gerrit']['config']['trackingid']['jira-fixes']['match'] = "([A-Z]+-[0-9]+)"
+default['gerrit']['config']['trackingid']['jira-fixes']['system'] = "JIRA"
+default['gerrit']['config']['trackingid']['jira-resolves']['footer'] = "Resolves"
+default['gerrit']['config']['trackingid']['jira-resolves']['match'] = "([A-Z]+-[0-9]+)"
+default['gerrit']['config']['trackingid']['jira-resolves']['system'] = "JIRA"
+default['gerrit']['config']['trackingid']['jira-related']['footer'] = "Related"
+default['gerrit']['config']['trackingid']['jira-related']['match'] = "([A-Z]+-[0-9]+)"
+default['gerrit']['config']['trackingid']['jira-related']['system'] = "JIRA"
+
 # these confidential attributes defined in gerrit_config will be shifted to etc/secure.config
 default['gerrit']['secure_config']['database']['password'] = true
 default['gerrit']['secure_config']['auth']['registerEmailPrivateKey'] = true
